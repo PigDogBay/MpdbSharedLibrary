@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="MpdBaileyTechnology.Shared.WPF.UserControls.LineChartControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:chart="clr-namespace:System.Windows.Forms.DataVisualization.Charting;assembly=System.Windows.Forms.DataVisualization"
+             xmlns:uc="clr-namespace:MpdBaileyTechnology.Shared.WPF.UserControls"
+             mc:Ignorable="d" 
+             Unloaded="UserControl_Unloaded"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <WindowsFormsHost x:Name="_Host">
+            <chart:Chart x:Name="_Chart"
+                         AntiAliasing="All"
+                         TextAntiAliasingQuality="High">
+                <chart:Chart.ChartAreas>
+                    <chart:ChartArea x:Name="_ChartArea">
+                        <chart:ChartArea.AxisX>
+                            <chart:Axis x:Name="_XAxis"/>
+                        </chart:ChartArea.AxisX>
+                        <chart:ChartArea.AxisY>
+                            <chart:Axis x:Name="_YAxis"/>
+                        </chart:ChartArea.AxisY>
+                    </chart:ChartArea>
+                </chart:Chart.ChartAreas>
+                <chart:Chart.Legends>
+                    <chart:Legend x:Name="_Legend"
+                                  Enabled="False">
+                    </chart:Legend>
+                </chart:Chart.Legends>
+            </chart:Chart>
+        </WindowsFormsHost>
+    </Grid>
+</UserControl>

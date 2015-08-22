@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A0F819B0-6C2E-4154-B8A5-A251AA0C9322}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MpdBaileyTechnology.Shared</RootNamespace>
+    <AssemblyName>MpdbSharedLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="ReachFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IO\EncodingUtils.cs" />
+    <Compile Include="IO\IInstrument.cs" />
+    <Compile Include="IO\LoggingInstrument.cs" />
+    <Compile Include="IO\Naming.cs" />
+    <Compile Include="IO\Serializer.cs" />
+    <Compile Include="IO\SerialPortInstrument.cs" />
+    <Compile Include="IO\ThreadSafeComms.cs" />
+    <Compile Include="Maths\BestLineFit.cs" />
+    <Compile Include="Maths\Checksum.cs" />
+    <Compile Include="Maths\Crc16Ccitt.cs" />
+    <Compile Include="Maths\Differentiator.cs" />
+    <Compile Include="Maths\DPoint.cs" />
+    <Compile Include="Maths\ExtensionMethods.cs" />
+    <Compile Include="Maths\Interpolator.cs" />
+    <Compile Include="Maths\LeastSquares.cs" />
+    <Compile Include="Maths\Matrix.cs" />
+    <Compile Include="Maths\QuadraticFit.cs" />
+    <Compile Include="Maths\QuadraticFitThruZero.cs" />
+    <Compile Include="Maths\RandomNumber.cs" />
+    <Compile Include="Maths\RollingAverage.cs" />
+    <Compile Include="Maths\StationaryPoints.cs" />
+    <Compile Include="Maths\SteinhartHartEquation.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Threading\DataStream.cs" />
+    <Compile Include="Threading\PlayControl.cs" />
+    <Compile Include="Threading\PlayControlFailedEventArgs.cs" />
+    <Compile Include="Utils\BinaryUtils.cs" />
+    <Compile Include="Utils\DateUtils.cs" />
+    <Compile Include="Utils\Disposer.cs" />
+    <Compile Include="Utils\DoubleIndexedDictionary.cs" />
+    <Compile Include="Utils\EnumTools.cs" />
+    <Compile Include="Utils\EventArg.cs" />
+    <Compile Include="Utils\IEnumerableExtensionMethods.cs" />
+    <Compile Include="Utils\IListExtensions.cs" />
+    <Compile Include="Utils\Notifier.cs" />
+    <Compile Include="Utils\RoboCop.cs" />
+    <Compile Include="Utils\Timing.cs" />
+    <Compile Include="Utils\XmlFactory.cs" />
+    <Compile Include="Utils\XmlFormatter.cs" />
+    <Compile Include="WPF\Collections\ObservableCollectionEx.cs" />
+    <Compile Include="WPF\Collections\WorkspaceManager.cs" />
+    <Compile Include="WPF\Model\ChartSeries.cs" />
+    <Compile Include="WPF\Model\RollingSeries.cs" />
+    <Compile Include="WPF\Printing\FlowDocumentPrintManager.cs" />
+    <Compile Include="WPF\Printing\FlowDocumentPrintPreviewDialog.xaml.cs" />
+    <Compile Include="WPF\Printing\FlowDocumentXamlFactory.cs" />
+    <Compile Include="WPF\Printing\ISupportFlowDocument.cs" />
+    <Compile Include="WPF\Printing\PrintingPaginator.cs" />
+    <Compile Include="WPF\RelayCommand.cs" />
+    <Compile Include="WPF\Service\Implementation\FileDialogHelper.cs" />
+    <Compile Include="WPF\Service\Implementation\PrintFlowDocument.cs" />
+    <Compile Include="WPF\Service\Implementation\Win32ErrorDialog.cs" />
+    <Compile Include="WPF\Service\Implementation\Win32FolderBrowserDialog.cs" />
+    <Compile Include="WPF\Service\Implementation\Win32InformationDialog.cs" />
+    <Compile Include="WPF\Service\Implementation\Win32OpenFileDialog.cs" />
+    <Compile Include="WPF\Service\Implementation\Win32SaveFileDialog.cs" />
+    <Compile Include="WPF\Service\Implementation\WpfTimerService.cs" />
+    <Compile Include="WPF\Service\IServiceFactory.cs" />
+    <Compile Include="WPF\Service\MockServiceFactory.cs" />
+    <Compile Include="WPF\Service\Mock\MockErrorDialog.cs" />
+    <Compile Include="WPF\Service\Mock\MockFolderBrowserDiualog.cs" />
+    <Compile Include="WPF\Service\Mock\MockInformationDialog.cs" />
+    <Compile Include="WPF\Service\Mock\MockOpenFileDialog.cs" />
+    <Compile Include="WPF\Service\Mock\MockPrintFlowDocument.cs" />
+    <Compile Include="WPF\Service\Mock\MockSaveFileDialog.cs" />
+    <Compile Include="WPF\Service\Mock\MockTimerService.cs" />
+    <Compile Include="WPF\Service\ServiceContainer.cs" />
+    <Compile Include="WPF\Service\Services\IErrorDialog.cs" />
+    <Compile Include="WPF\Service\Services\IFolderBrowserDialog.cs" />
+    <Compile Include="WPF\Service\Services\IInformationDialog.cs" />
+    <Compile Include="WPF\Service\Services\IOpenFileDialog.cs" />
+    <Compile Include="WPF\Service\Services\IPrintFlowDocument.cs" />
+    <Compile Include="WPF\Service\Services\ISaveFileDialog.cs" />
+    <Compile Include="WPF\Service\Services\ITimerService.cs" />
+    <Compile Include="WPF\Service\WPFServiceFactory.cs" />
+    <Compile Include="WPF\UserControls\LineChartControl.xaml.cs" />
+    <Compile Include="WPF\ValidationRules\MaxMinValidationRule.cs" />
+    <Compile Include="WPF\ValueConverter\BooleanToStringConverter.cs" />
+    <Compile Include="WPF\ValueConverter\BooleanToVisibilityConverter.cs" />
+    <Compile Include="WPF\ValueConverter\Int32ToStringConverter.cs" />
+    <Compile Include="WPF\ValueConverter\InverseBooleanConverter.cs" />
+    <Compile Include="WPF\ValueConverter\InverseBooleanToVisibilityConverter.cs" />
+    <Compile Include="WPF\ValueConverter\ParameterToBooleanConverter.cs" />
+    <Compile Include="WPF\ValueConverter\TimeSpanConverter.cs" />
+    <Compile Include="WPF\Utils\ResourceReader.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="WPF\Printing\FlowDocumentPrintPreviewDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WPF\UserControls\LineChartControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
